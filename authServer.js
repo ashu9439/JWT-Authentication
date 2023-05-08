@@ -6,6 +6,8 @@ const jwt = require('jsonwebtoken')
 
 app.use(express.json())
 
+// not good to save refresh token in this array or any local storage. so we need to store it in dataBase or Redish cashe etc.
+// but just for demo i am pushing it into an array
 let refreshTokens = []
 
 app.post('/token', (req, res) => {
